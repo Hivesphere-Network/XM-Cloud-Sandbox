@@ -18,24 +18,12 @@ type ImageProps = {
   fields: Fields;
 };
 
-const ImageDefault = (props: ImageProps): JSX.Element => (
-  <div className={`component image ${props.params.styles}`.trimEnd()}>
-    <div className="component-content">
-      <span className="is-empty-hint">Image</span>
-    </div>
-  </div>
-);
-
 export const Default = (props: ImageProps): JSX.Element => {
   useSitecoreContext();
 
-  if (props.fields) {
-    return (
-      <div>
-        <NextImage field={props.fields?.Image} imageParams={{ w: 360, h: 270 }} quality={100} />
-      </div>
-    );
-  }
-
-  return <ImageDefault {...props} />;
+  return (
+    <div>
+      <NextImage field={props.fields?.Image} imageParams={{ w: 360, h: 270 }} quality={100} />
+    </div>
+  );
 };
