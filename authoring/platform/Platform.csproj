@@ -74,7 +74,6 @@
     <Folder Include="App_Config\Include\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\MediaResizing.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
