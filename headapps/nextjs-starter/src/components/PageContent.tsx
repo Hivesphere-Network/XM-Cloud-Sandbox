@@ -3,6 +3,9 @@ import {
   RichText as JssRichText,
   useSitecoreContext,
   RichTextField,
+  GetStaticComponentProps,
+  ComponentRendering,
+  LayoutServiceData,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
@@ -18,6 +21,15 @@ type ComponentContentProps = {
   id: string;
   styles: string;
   children: JSX.Element;
+};
+
+type FieldValue = {
+  value: string;
+  fields?: {
+    type?: {
+      value?: string;
+    };
+  };
 };
 
 const ComponentContent = (props: ComponentContentProps) => {
@@ -56,4 +68,22 @@ export const Default = (props: PageContentProps): JSX.Element => {
       <JssRichText field={field} />
     </ComponentContent>
   );
+};
+
+export const getStaticProps: GetStaticComponentProps = async (
+  _rendering: ComponentRendering,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _layout: LayoutServiceData
+) => {
+  const getDescendantTags =
+    _rendering && _rendering.fields && (_rendering.fields['getStaticProps'] as FieldValue);
+  if (getDescendantTags?.value) {
+    console.log('getStaticProps True');
+    console.log(getDescendantTags?.value);
+    return null;
+  } else {
+    console.log('getStaticProps False');
+    console.log(getDescendantTags?.value);
+    return null;
+  }
 };
