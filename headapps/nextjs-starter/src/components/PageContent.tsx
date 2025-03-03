@@ -84,6 +84,8 @@ export const getStaticProps: GetStaticComponentProps = async (
   } else {
     console.log('getStaticProps False');
     console.log(getDescendantTags?.value);
-    return null;
+    return {
+      notFound: true,
+    };
   }
 };
