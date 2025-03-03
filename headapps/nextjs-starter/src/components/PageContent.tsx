@@ -81,5 +81,6 @@ export const getStaticProps: GetStaticComponentProps = async (
     return null;
   }
 
-  return { props: {} };
+  const content = 'Test';
+  return content;
 };
