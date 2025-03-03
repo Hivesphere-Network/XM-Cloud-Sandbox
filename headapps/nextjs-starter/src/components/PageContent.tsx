@@ -78,14 +78,8 @@ export const getStaticProps: GetStaticComponentProps = async (
   const getDescendantTags =
     _rendering && _rendering.fields && (_rendering.fields['getStaticProps'] as FieldValue);
   if (getDescendantTags?.value) {
-    console.log('getStaticProps True');
-    console.log(getDescendantTags?.value);
     return null;
-  } else {
-    console.log('getStaticProps False');
-    console.log(getDescendantTags?.value);
-    return {
-      notFound: true,
-    };
   }
+
+  return { props: {} };
 };
