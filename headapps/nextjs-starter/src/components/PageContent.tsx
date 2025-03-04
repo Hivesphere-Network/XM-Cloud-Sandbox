@@ -3,9 +3,6 @@ import {
   RichText as JssRichText,
   useSitecoreContext,
   RichTextField,
-  GetStaticComponentProps,
-  ComponentRendering,
-  LayoutServiceData,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
