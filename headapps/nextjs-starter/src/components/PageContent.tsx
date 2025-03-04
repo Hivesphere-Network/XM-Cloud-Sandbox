@@ -23,15 +23,6 @@ type ComponentContentProps = {
   children: JSX.Element;
 };
 
-type FieldValue = {
-  value: string;
-  fields?: {
-    type?: {
-      value?: string;
-    };
-  };
-};
-
 const ComponentContent = (props: ComponentContentProps) => {
   const id = props.id;
   return (
