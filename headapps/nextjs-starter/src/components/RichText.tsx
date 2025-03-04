@@ -1,5 +1,11 @@
 import React from 'react';
-import { Field, RichText as JssRichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  ComponentRendering,
+  Field,
+  GetStaticComponentProps,
+  RichText as JssRichText,
+  LayoutServiceData,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   Text: Field<string>;
@@ -26,4 +32,13 @@ export const Default = (props: RichTextProps): JSX.Element => {
       <div className="component-content">{text}</div>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticComponentProps = async (
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _rendering: ComponentRendering,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _layout: LayoutServiceData
+) => {
+  return null;
 };
