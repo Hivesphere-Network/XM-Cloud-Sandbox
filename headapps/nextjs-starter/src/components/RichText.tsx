@@ -34,11 +34,11 @@ export const Default = (props: RichTextProps): JSX.Element => {
   );
 };
 
-export const getStaticProps: GetStaticComponentProps = async (
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  _rendering: ComponentRendering,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  _layout: LayoutServiceData
-) => {
-  return { props: {} };
-};
+// export const getStaticProps: GetStaticComponentProps = async (
+//   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+//   _rendering: ComponentRendering,
+//   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+//   _layout: LayoutServiceData
+// ) => {
+//   return { props: {} };
+// };
