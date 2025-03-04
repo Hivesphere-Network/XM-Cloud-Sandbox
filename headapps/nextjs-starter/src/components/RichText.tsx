@@ -40,5 +40,5 @@ export const getStaticProps: GetStaticComponentProps = async (
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _layout: LayoutServiceData
 ) => {
-  return null;
+  return { props: {} };
 };
